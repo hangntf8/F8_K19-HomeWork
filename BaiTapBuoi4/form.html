@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -10,75 +10,79 @@
 <body>
 
 <form action="https://api-gateway.f8.edu.vn/action_page.php" method="post" enctype="multipart/form-data">
-<fieldset>
-    <legend>Thông tin cơ bản</legend>
-   <div>
-       <label for="fullname">Họ và tên:</label>
-       <input id="fullname" type="text" name="fullname" required="required" placeholder="Nguyễn Văn A" autofocus>
-   </div>
+    <fieldset>
+        <legend>Thông tin cơ bản</legend>
+        <div>
+            <label for="fullname">Họ và tên:</label>
+            <input tabindex="1" id="fullname" type="text" name="fullname" required="required" placeholder="Nguyễn Văn A"
+                   autofocus>
+        </div>
 
-    <div>
-       <label for="email">Email:</label>
-       <input id="email" type="email" name="email" required="required" placeholder="example@gmail.com">
+        <div>
+            <label for="email">Email:</label>
+            <input tabindex="2" id="email" type="email" name="email" required="required"
+                   placeholder="example@gmail.com">
 
-   </div>
+        </div>
 
-    <div>
-        <label for="password">Mật khẩu:</label>
-        <input id="password" type="password" name="password" required="required" minlength="6" autocomplete="off">
-    </div>
+        <div>
+            <label for="password">Mật khẩu:</label>
+            <input tabindex="3" id="password" type="password" name="password" required="required" minlength="6"
+                   autocomplete="off">
+        </div>
 
-    <div>
-        <label for="confirm_password">Nhập lại mật khẩu:</label>
-        <input id="confirm_password" type="password" name="confirm_password" required="required">
-    </div>
-    <div>
-        <label for="phone">Số điện thoại:</label>
-        <input id="phone"   type="tel" name="phone" placeholder="0xxxxxxxxx" pattern="0[0-9]{9}">
-    </div>
-    <div>
-        <label for="birthday">Ngày sinh:</label>
-        <input id="birthday" type="date" name="birthday" required="required">
-    </div>
-    <div>
-        <label for="age">Tuổi:</label>
-        <input id="age" type="number" name="age" min="1" max="120">
-    </div>
-    <div>
-        <label for="website">Website cá nhân:</label>
-        <input id="website"    type="url" name="website" placeholder="https://...">
-    </div>
-    <div>
-        <label for="address">Địa chỉ:</label>
-        <input id="address"     type="text" name="address" placeholder="Số nhà, đường, phường/xã">
-    </div>
-    <div>
-        <label for="zipcode">Mã bưu chính:</label>
-        <input id="zipcode"    type="text" name="zipcode" maxlength="6" placeholder="700000">
-    </div>
+        <div>
+            <label for="confirm_password">Nhập lại mật khẩu:</label>
+            <input tabindex="4" id="confirm_password" type="password" name="confirm_password" required="required"
+                   autocomplete="off">
+        </div>
+        <div>
+            <label for="phone">Số điện thoại:</label>
+            <input tabindex="5" id="phone" type="tel" name="phone" placeholder="0xxxxxxxxx" pattern="0[0-9]{9}">
+        </div>
+        <div>
+            <label for="birthday">Ngày sinh:</label>
+            <input tabindex="6" id="birthday" type="date" name="birthday" required="required">
+        </div>
+        <div>
+            <label for="age">Tuổi:</label>
+            <input tabindex="7" id="age" type="number" name="age" min="1" max="120">
+        </div>
+        <div>
+            <label for="website">Website cá nhân:</label>
+            <input tabindex="8" id="website" type="url" name="website" placeholder="https://...">
+        </div>
+        <div>
+            <label for="address">Địa chỉ:</label>
+            <input tabindex="9" id="address" type="text" name="address" placeholder="Số nhà, đường, phường/xã">
+        </div>
+        <div>
+            <label for="zipcode">Mã bưu chính:</label>
+            <input tabindex="10" id="zipcode" type="text" name="zipcode" maxlength="6" placeholder="700000">
+        </div>
 
-</fieldset>
+    </fieldset>
 
     <fieldset>
         <legend>Thông tin bổ sung</legend>
 
-<div>
-    <label> Giới tính</label>
-    </div>
+        <div>
+            <label> Giới tính</label>
+        </div>
 
         <div>
-    <input id="male"   type="radio" name="gender" value="male" required="required">
+            <input id="male" type="radio" name="gender" value="male" required="required">
             <label for="male">Nam</label>
-</div>
+        </div>
         <div>
-            <input id="female"   type="radio" name="gender" value="female" required="required">
+            <input id="female" type="radio" name="gender" value="female" required="required">
             <label for="female">Nữ</label>
 
 
-</div>
+        </div>
 
         <div>
-            <input id="other"   type="radio" name="gender" value="other" required="required">
+            <input id="other" type="radio" name="gender" value="other" required="required">
             <label for="other">Khác</label>
 
         </div>
@@ -86,32 +90,32 @@
         <div>
             <label>Sở thích</label>
         </div>
-<div>
-    <input id="reading" type="checkbox" name="hobby[]" value="reading">
-    <label for="reading">Đọc sách </label>
-</div>
+        <div>
+            <input id="reading" type="checkbox" name="hobby[]" value="reading">
+            <label for="reading">Đọc sách </label>
+        </div>
         <div>
             <input id="listening" type="checkbox" name="hobby[]" value="listening">
             <label for="listening">Nghe nhạc</label>
         </div>
 
-       <div>
-           <input id="traveling" type="checkbox" name="hobby[]" value="traveling" >
-           <label for="traveling">Du lịch</label>
-       </div>
+        <div>
+            <input id="traveling" type="checkbox" name="hobby[]" value="traveling">
+            <label for="traveling">Du lịch</label>
+        </div>
 
         <div>
-            <input id="programming" type="checkbox" name="hobby[]" value="programming" >
+            <input id="programming" type="checkbox" name="hobby[]" value="programming">
             <label for="programming">Lập trình</label>
         </div>
 
         <div>
-            <input id="cooking" type="checkbox" name="hobby[]" value="cooking" >
+            <input id="cooking" type="checkbox" name="hobby[]" value="cooking">
             <label for="cooking">Nấu ăn</label>
         </div>
 
         <div>
-            <input id="sports" type="checkbox" name="hobby[]" value="sports" >
+            <input id="sports" type="checkbox" name="hobby[]" value="sports">
             <label for="sports">Thể thao</label>
         </div>
 
@@ -119,13 +123,13 @@
             <label for="education">Trình độ học vấn</label>
         </div>
         <div>
-           <select id="education" name="education">
-               <option value="high school">Trung học</option>
-               <option value="college">Cao đẳng</option>
-               <option value="university">Đại học</option>
-               <option value="postgraduate">Sau đại học</option>
+            <select id="education" name="education">
+                <option value="high school">Trung học</option>
+                <option value="college">Cao đẳng</option>
+                <option value="university">Đại học</option>
+                <option value="postgraduate">Sau đại học</option>
 
-           </select>
+            </select>
         </div>
 
         <div>
@@ -146,76 +150,170 @@
         <div>
             <label for="job">Nghề nghiệp</label>
         </div>
-<div>
-    <select name="job" id="job">
-        <option value="student">Học sinh</option>
-        <option value="univerity_student">Sinh viên</option>
-        <option value="office_worker">Nhân viên văn phòng</option>
-        <option value="programmer">Lập trình viên</option>
-        <option value="other">Khác</option>
-
-
-    </select>
-</div>
-
         <div>
-            <label></label>
-        </div>
-        <div>
-            <input id="" type="" name="" value="">
-            <label for=""></label>
+            <select name="job" id="job">
+                <option value="student">Học sinh</option>
+                <option value="univerity_student">Sinh viên</option>
+                <option value="office_worker">Nhân viên văn phòng</option>
+                <option value="programmer">Lập trình viên</option>
+                <option value="other">Khác</option>
+
+
+            </select>
         </div>
 
         <div>
-            <label></label>
+            <label>Khoá học quan tâm</label>
         </div>
         <div>
-            <input id="" type="" name="" value="">
-            <label for=""></label>
-        </div>
-
-        <div>
-            <label></label>
-        </div>
-        <div>
-            <input id="" type="" name="" value="">
-            <label for=""></label>
-        </div>
-
-        <div>
-            <label></label>
-        </div>
-        <div>
-            <input id="" type="" name="" value="">
-            <label for=""></label>
-        </div>
-
-        <div>
-            <label></label>
-        </div>
-        <div>
-            <input id="" type="" name="" value="">
-            <label for=""></label>
-        </div>
-
-        <div>
-            <label></label>
-        </div>
-        <div>
-            <input id="" type="" name="" value="">
-            <label for=""></label>
+            <input id="htmlCss" type="checkbox" name="course[]" value="htmlCss">
+            <label for="htmlCss">HTML-CSS</label>
         </div>
 
 
+        <div>
+            <input id="javaScript" type="checkbox" name="course[]" value="javaScript">
+            <label for="javaScript">JavaScript</label>
+        </div>
+
+
+        <div>
+            <input id="reactJs" type="checkbox" name="course[]" value="reactJs">
+            <label for="reactJs">ReactJS</label>
+        </div>
+
+
+        <div>
+            <input id="nodeJS" type="checkbox" name="course[]" value="nodeJS">
+            <label for="nodeJS">NodeJS</label>
+        </div>
+
+
+        <div>
+            <input id="python" type="checkbox" name="course[]" value="python">
+            <label for="python">Python</label>
+        </div>
+
+        <div>
+            <label>Hình thức học</label>
+        </div>
+        <div>
+            <input id="online" type="radio" name="study_type" value="online">
+            <label for="online">Online</label>
+        </div>
+        <div>
+            <input type="radio" id="offline" name="study_type" value="offline">
+            <label for="offline">Offline</label>
+        </div>
+
+        <textarea name="bio" rows="4" placeholder="Viết vài dòng về bản thân..."></textarea>
+
+
+        <div>
+            <label for="avatar">Ảnh đại diện</label>
+            <input type="file" name="avatar" id="avatar" accept=".jpg,.png">
+        </div>
+
+        <div>
+            <label for="cv">CV/Hồ sơ</label>
+            <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx">
+        </div>
     </fieldset>
+
 
     <fieldset>
         <legend>Input đặc biệt</legend>
+        <div>
+            <label for="fav_color">Màu yêu thích</label>
+            <input id="fav_color" type="color" name="fav_color" value="#ff6600">
+        </div>
+
+        <div>
+            <label for="satisfaction">Mức độ hài lòng(0-10)</label>
+            <input id="satisfaction" type="range" name="satisfaction" value="5" min="0" max="10">
+        </div>
+
+        <div>
+            <label for="study_time">Giờ học trong ngày </label>
+            <input id="study_time" type="time" name="study_time" readonly>
+            <!-- Lý do dùng readonly: vì không muốn người dùng sửa được mà chỉ được đọc thôi, vẫn gửi dữ liệu được lên sever -->
+        </div>
+
+        <div>
+            <label for="start_month">Tháng bắt đầu học</label>
+            <input type="month" name="start_month" id="start_month">
+        </div>
+
+        <div>
+            <label for="start_week">Tuần bắt đầu hoc</label>
+            <input type="week" name="start_week" id="start_week">
+        </div>
+
+        <div>
+            <label for="register_at">Ngày &amp; giờ đăng kí</label>
+            <input type="datetime-local" name="register_at" id="register_at">
+        </div>
+        <div>
+            <label for="search_course">Tìm kiếm khoá học</label>
+            <input type="search" name="search_course" id="search_course" placeholder="Nhập tên khoá học...">
+        </div>
+        <div>
+            <label for="experience">Số năm kinh nghiệm</label>
+            <input type="number" name="experience" id="experience" min="0" max="50" step="1">
+        </div>
+        <div>
+            <label for="budget">Mức học phí mong muốn</label>
+            <input type="range" name="budget" id="budget" min="0" max="5000000" step="100000" value="1000000">
+        </div>
+        <div>
+            <label for="fav_language">Ngôn ngữ lập trình yêu thích</label>
+            <input type="text" name="fav_language" id="fav_language" placeholder="VD:Javascript,Python...">
+        </div>
+
+
     </fieldset>
 
     <fieldset>
         <legend>Xác nhận &amp; điều khoản</legend>
+
+        <div>
+            <label for="agree_terms">Tôi đồng ý với điều khoản sử dụng</label>
+            <input id="agree_terms" type="checkbox" name="agree_terms" required>
+        </div>
+        <div>
+            <label for="subscribe">Nhận thông báo qua email</label>
+            <input type="checkbox" id="subscribe" name="subscribe">
+        </div>
+        <div>
+            <label for="sms_notify">Nhận thông báo qua SMS</label>
+            <input type="checkbox" id="sms_notify" name="sms_notify">
+        </div>
+        <div>
+            <label for="ref_code">Mã giới thiệu</label>
+            <input type="text" id="ref_code" name="ref_code" placeholder="Nhập mã nếu có">
+        </div>
+        <div>
+            <label for="course_id">Mã khoá học(ẩn)</label>
+            <input type="hidden" name="course_id" id="course_id" value="F8_2024">
+
+
+        </div>
+        <div>
+            <label for="utm_source">Nguồn truy cập(ẩn)</label>
+            <input type="hidden" name="utm_source" id="utm_source" value="website" disabled>
+            <!--        Sự khác nhau giưã readonly và disabled-->
+            <!--            readonly: gửi dữ liệu trường name lên sever được-->
+            <!--            disabled: không gửi lên sever được-->
+
+        </div>
+
     </fieldset>
+
+    <div>
+
+        <input type="submit" value="Đăng kí ngay">
+        <input type="reset" value="Nhập lại">
+    </div>
 
 </form>
 
