@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <style>
+/*input {*/
+/*    display: none;*/
+/*}*/
+
+        .layout{
+            box-sizing: border-box;
+            width: 100%;
+
+        }
+.columns{
+width: 100%;
+}
+
+.control-panel{
+    display: inline-block;
+    width: calc(40% - 20px);
+
+}
+
+.preview-area{
+    display: inline-block;
+    width: 60%;
+    vertical-align: top;
+
+    /*margin-left: calc(100vw - 50vw);*/
+
+}
+
+.columns:has(#light-main:checked)  .preview-area-main {
+    background-color: lightgoldenrodyellow;
+}
+.columns:has(#small-size:checked)  h1 {
+    font-size: 2.5rem;
+}
+
+    </style>
+
+    <title>PERSONAL PROFILE CUSTOMIZER</title>
+</head>
+<body>
+<!-- Layout -->
+<div class="layout">
+    <div class="columns">
+
+        <!-- Control Panel -->
+        <div class="control-panel">
+            <p>Tuỳ chỉnh hồ sơ</p>
+<!--             Color Main -->
+            <p>1.Màu nền hồ sơ</p>
+
+            <input type="radio" id="light-main" name="colorMain" value="light-main" >
+            <label for="light-main">Light</label>
+
+            <input type="radio" id="gray-main" name="colorMain" value="gray-main" >
+            <label for="gray-main">Gray</label>
+
+            <input type="radio" id="yellow-main" name="colorMain" value="yellow-main" >
+            <label for="yellow-main">Yellow</label>
+
+            <input type="radio" id="blue-main" name="colorMain" value="blue-main" >
+            <label for="blue-main">Blue</label>
+
+            <input type="radio" id="pink-main" name="colorMain" value="pink-main" >
+            <label for="pink-main">Pink</label>
+
+<!-- Size name -->
+            <p>2.Kích thước tên</p>
+
+            <input type="radio" id="small-size" name="sizeName" value="small-size" >
+            <label for="small-size">Small</label>
+
+            <input type="radio" id="medium-size" name="sizeName" value="medium-size" >
+            <label for="medium-size">Medium</label>
+
+            <input type="radio" id="large-size" name="sizeName" value="large-size" >
+            <label for="large-size">Large</label>
+
+<!--     Text case name       -->
+            <p>3.Kiểu chữ tên</p>
+            <input type="radio" id="normal-text" name="textCase" value="normal-text" >
+            <label for="normal-text">Normal</label>
+
+            <input type="radio" id="uppercase-text" name="textCase" value="uppercase-text" >
+            <label>Uppercase</label>
+
+<!--           Color name -->
+            <p>4.Màu chữ tên</p>
+
+            <input type="radio" id="dark-color" name="colorName" value="dark-color" >
+            <label for="dark-color">Dark</label>
+
+            <input type="radio" id="blue-color" name="colorName" value="blue-color" >
+            <label>Blue</label>
+
+            <input type="radio" id="green-color" name="colorName" value="green-color" >
+            <label>Green</label>
+
+            <input type="radio" id="red-color" name="colorName" value="red-color" >
+            <label>Red</label>
+
+<!--          Alignment  -->
+            <p>5.Căn lề hồ sơ</p>
+            <input type="radio" id="left" name="align" value="left" >
+            <label>Left</label>
+            <input type="radio" id="center" name="align" value="center" >
+            <label>Center</label>
+            <input type="radio" id="right" name="align" value="right" >
+            <label>Right</label>
+
+<!--          Job title size -->
+            <p>6.Kích thước nghề nghiệp</p>
+
+            <input type="radio" id="job-title-small" name="jobTitleSize" value="job-title-small" >
+            <label>Small</label>
+
+            <input type="radio" id="job-title-medium" name="jobTitleSize" value="job-title-medium" >
+            <label>Medium</label>
+
+            <input type="radio" id="job-title-large" name="jobTitleSize" value="job-title-small" >
+            <label>Large</label>
+
+<!--           Job title letter spacing  -->
+            <p>7.Khoảng cách chữ nghề nghiệp</p>
+
+            <input type="radio" id="job-title-spacing-tight" name="jobTitleSpacing" value="job-title-spacing-tight" >
+            <label>Tight</label>
+
+            <input type="radio" id="job-title-spacing-normal" name="jobTitleSpacing" value="job-title-spacing-normal" >
+            <label>Normal</label>
+
+            <input type="radio" id="job-title-spacing-wide" name="jobTitleSpacing" value="job-title-spacing-wide" >
+            <label>Wide</label>
+
+<!--           Description size -->
+            <p>8.Kích thước mô tả</p>
+
+            <input type="radio" id="description-small" name="descriptionSize" value="description-small" >
+            <label>Small</label>
+
+            <input type="radio" id="description-medium" name="descriptionSize" value="description-medium" >
+            <label>Medium</label>
+
+            <input type="radio" id="description-large" name="descriptionSize" value="description-large" >
+            <label>Large</label>
+
+<!--            Description line height -->
+            <p>9.Giãn dòng mô tả</p>
+
+            <input type="radio" id="description-line-height-tight" name="descriptionLineHeight" value="description-line-height-tight" >
+            <label>Tight</label>
+
+            <input type="radio" id="description-line-height-normal" name="descriptionLineHeight" value="description-line-height-normal" >
+            <label>Normal</label>
+
+            <input type="radio" id="description-line-height-loose" name="descriptionLineHeight" value="description-line-height-loose" >
+            <label>Loose</label>
+
+<!-- Color contact -->
+            <p>10.Màu nút liên hệ</p>
+
+            <input type="radio" id="color-contact-dark" name="colorContact" value="color-contact-dark" >
+            <label>Dark</label>
+
+            <input type="radio" id="color-contact-blue" name="colorContact" value="color-contact-blue" >
+            <label>Blue</label>
+
+            <input type="radio" id="color-contact-light" name="colorContact" value="color-contact-light" >
+            <label>Light</label>
+
+        </div><!-- Preview Area--><div class="preview-area">
+
+        <p>Preview hồ sơ cá nhân</p>
+               <div class="preview-area-main">
+                   <h1>Nguyễn Minh Khoa</h1>
+                   <p>Frontend Developer - Ho Chi Minh City</p>
+                   <p>Tôi là một lập trình viên Frontend với hơn 3 năm kinh nghiệm xây dựng giao diện web hiện đại, tập trung vào hiệu suất và trải nghiệm người dùng. Tôi yêu thích việc biến ý tưởng sáng tạo thành sản phẩm thực tế.</p>
+
+                   <div>
+                       <p>Kỹ năng</p>
+                       <span>HTML5</span>
+                       <span>CSS3</span>
+                       <span>JavaScript</span>
+                       <span>React</span>
+                       <span>Figma</span>
+                       <span>Git</span>
+                   </div>
+
+                   <div>
+                       <p>Sở thích</p>
+                       <span>Nhiếp ảnh</span>
+                       <span>Đọc sách</span>
+                       <span>Du lịch</span>
+                       <span>Cà phê</span>
+                   </div>
+
+                   <button>Liên hệ với tôi</button>
+               </div>
+               </div>
+    </div>
+</div>
+
+
+</body>
+</html>
