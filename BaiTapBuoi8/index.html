@@ -7,50 +7,71 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <style>
-input {
-    display: none;
-}
-
+/* Reset css */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Layout chính */
+html{
+    font-size: 16px;
+}
+
 body{
+line-height: 2;
+    min-height: 100vh;
+}
+
+.layout{
+    width: 100%;
+    min-height: 100vh;
 
 }
 
-        .layout{
-            box-sizing: border-box;
-            width: 100%;
+input {
+    display: none;
+}
+input:checked + label {
+    font-weight: bold;
+}
 
-        }
         .padding-label{
             padding: 0.5em;
+            background-color: #c5c2c2;
+            margin: 10px 5px;
         }
-        .padding-button{
+        .padding-btn{
             padding: 0.8em;
         }
 
 .columns{
 width: 100%;
+    background-color: #9ca3af;
 }
 
+/* Control panel*/
 .control-panel{
+    padding: 20px;
+margin-left: 10px;
+margin-right: 10px;
+    margin-top: 10px;
     display: inline-block;
     width: calc(40% - 20px);
     min-height: 100vh;
+    background-color: #dfdddd;
 
 }
+.control-panel > p{
+    margin-top: 10px;
+}
 
+/* Preview area*/
 .preview-area{
     display: inline-block;
     width: 60%;
     vertical-align: top;
-
-
-    /*margin-left: calc(100vw - 50vw);*/
-
 }
 
 .preview-area-top{
@@ -61,7 +82,33 @@ width: 100%;
 .profile-card{
     display: block;
     min-height: calc(100vh - 40px);
+
 }
+.profile-name{
+   padding-top: 10px;
+    line-height: 1.2;
+}
+.profile-job{
+    line-height: 1.5;
+}
+.skill-list,.skill-tag,.hobby-list{
+    font-size: 0.9rem;
+}
+.skill-tag{
+    margin: 10px 5px;
+    padding: 0.5em;
+    background-color: #e8e6e6;
+}
+.hobby-tag{
+    margin: 10px 5px;
+}
+.btn-contact{
+
+    font-size: 0.9rem;
+   border: none;
+}
+
+/* Activity logic */
 /* Background theme */
 
 .columns:has(#background-theme-light:checked)  .profile-card {
@@ -77,29 +124,29 @@ width: 100%;
 }
 
 /* Name size*/
-.columns:has(#name-size-small:checked)  h1 {
-    font-size: 1.5rem;
-}.columns:has(#name-size-medium:checked)  h1 {
+.columns:has(#name-size-small:checked)  .profile-name {
     font-size: 2rem;
-}.columns:has(#name-size-large:checked)  h1 {
-    font-size: 2.5rem;
+}.columns:has(#name-size-medium:checked)  .profile-name {
+    font-size: 2.35rem;
+}.columns:has(#name-size-large:checked)  .profile-name {
+    font-size: 2.75rem;
 }
 
     /* Name text style*/
-.columns:has(#name-text-style-normal:checked)  h1 {
+.columns:has(#name-text-style-normal:checked)  .profile-name {
     text-transform: none;
-}.columns:has(#name-text-style-uppercase:checked)  h1 {
+}.columns:has(#name-text-style-uppercase:checked)  .profile-name {
     text-transform: uppercase;
 }
 
     /* Name color*/
-.columns:has(#name-color-dark:checked)  h1 {
+.columns:has(#name-color-dark:checked)  .profile-name {
     color: darkslategray;
-}.columns:has(#name-color-blue:checked)  h1 {
+}.columns:has(#name-color-blue:checked)  .profile-name {
     color: blue;
-}.columns:has(#name-color-green:checked)  h1 {
+}.columns:has(#name-color-green:checked)  .profile-name {
     color: green;
-}.columns:has(#name-color-red:checked)  h1 {
+}.columns:has(#name-color-red:checked)  .profile-name {
     color: orangered;
 }
 
@@ -113,57 +160,57 @@ width: 100%;
 .columns:has(#text-alignment-right:checked)  .profile-card {
     text-align: right;
 }
-
-.columns:has(#job-title-size-small:checked)  .job-title-name {
-    font-size: 0.5rem;
+/* Job title size*/
+.columns:has(#job-title-size-small:checked)  .profile-job {
+    font-size: 0.9rem;
 }
-.columns:has(#job-title-size-medium:checked)  .job-title-name {
-    font-size: 1rem;
+.columns:has(#job-title-size-medium:checked)  .profile-job {
+    font-size: 1.1rem;
 }
-.columns:has(#job-title-size-large:checked)  .job-title-name {
-    font-size: 1.5rem;
+.columns:has(#job-title-size-large:checked)  .profile-job {
+    font-size: 1.3rem;
 }
 
 /* Job title name letter spacing*/
-.columns:has(#job-letter-spacing-tight:checked)  .job-title-name {
-    letter-spacing: 0.5px;
+.columns:has(#job-letter-spacing-tight:checked)  .profile-job {
+    letter-spacing: 0.03em;
 }
-.columns:has(#job-letter-spacing-normal:checked)  .job-title-name {
-    letter-spacing: 1.5px;
+.columns:has(#job-letter-spacing-normal:checked)  .profile-job {
+    letter-spacing: 0.02em;
 }
-.columns:has(#job-letter-spacing-wide:checked)  .job-title-name {
-    letter-spacing: 2.5px;
+.columns:has(#job-letter-spacing-wide:checked)  .profile-job {
+    letter-spacing: 0.18em;
 }
 /* Description size */
-.columns:has(#description-size-small:checked)  .description {
-    font-size: 0.8rem;
+.columns:has(#description-size-small:checked)  .profile-desc {
+    font-size: 0.9rem;
 }
-.columns:has(#description-size-medium:checked)  .description {
+.columns:has(#description-size-medium:checked)  .profile-desc {
+    font-size: 1rem;
+}
+.columns:has(#description-size-large:checked)  .profile-desc {
     font-size: 1.2rem;
 }
-.columns:has(#description-size-large:checked)  .description {
-    font-size: 1.6rem;
-}
 
-/* Description line height*/
-.columns:has(#description-line-height-tight:checked)  .description {
-    line-height: 0.9rem;
+/* profile-desc line height*/
+.columns:has(#profile-desc-line-height-tight:checked)  .profile-desc {
+    line-height: 1.6;
 }
-.columns:has(#description-line-height-normal:checked)  .description {
-    line-height: 1.2rem;
+.columns:has(#profile-desc-line-height-normal:checked)  .profile-desc {
+    line-height: 1.8;
 }
-.columns:has(#description-line-height-loose:checked)  .description {
-    line-height: 1.5rem;
+.columns:has(#profile-desc-line-height-loose:checked)  .profile-desc {
+    line-height: 2;
 }
 
     /* Contact button color*/
-.columns:has(#contact-button-color-dark:checked)  .contact-button{
+.columns:has(#btn-contact-color-dark:checked)  .btn-contact{
     background-color: darkgray;
 }
-.columns:has(#contact-button-color-blue:checked)  .contact-button{
+.columns:has(#btn-contact-color-blue:checked)  .btn-contact{
     background-color: lightskyblue;
 }
-.columns:has(#contact-button-color-light:checked)  .contact-button {
+.columns:has(#btn-contact-color-light:checked)  .btn-contact {
     background-color: lightgoldenrodyellow;
 }
 
@@ -183,153 +230,153 @@ width: 100%;
             <p>1.Màu nền hồ sơ</p>
 
             <input type="radio" id="background-theme-light" name="backgroundTheme" value="background-theme-light" >
-            <label class="padding-label" for="background-theme-light">Light</label>
+            <label  class="padding-label" for="background-theme-light">Light</label>
 
             <input type="radio" id="background-theme-gray" name="backgroundTheme" value="background-theme-gray" >
-            <label class="padding-label" for="background-theme-gray">Gray</label>
+            <label  class="padding-label" for="background-theme-gray">Gray</label>
 
             <input type="radio" id="background-theme-yellow" name="backgroundTheme" value="background-theme-yellow" >
-            <label for="background-theme-yellow">Yellow</label>
+            <label class="padding-label" for="background-theme-yellow">Yellow</label>
 
             <input type="radio" id="background-theme-blue" name="backgroundTheme" value="background-theme-blue" >
-            <label for="background-theme-blue">Blue</label>
+            <label class="padding-label" for="background-theme-blue">Blue</label>
 
             <input type="radio" id="background-theme-pink" name="backgroundTheme" value="background-theme-pink" >
-            <label for="background-theme-pink">Pink</label>
+            <label class="padding-label" for="background-theme-pink">Pink</label>
 
 <!-- Name size -->
             <p>2.Kích thước tên</p>
 
             <input type="radio" id="name-size-small" name="nameSize" value="name-size-small" >
-            <label for="name-size-small">Small</label>
+            <label class="padding-label" for="name-size-small">Small</label>
 
             <input type="radio" id="name-size-medium" name="nameSize" value="name-size-medium" >
-            <label for="name-size-medium">Medium</label>
+            <label class="padding-label" for="name-size-medium">Medium</label>
 
             <input type="radio" id="name-size-large" name="nameSize" value="name-size-large" >
-            <label for="name-size-large">Large</label>
+            <label class="padding-label" for="name-size-large">Large</label>
 
 <!--     Name Text Style      -->
             <p>3.Kiểu chữ tên</p>
             <input type="radio" id="name-text-style-normal" name="nameTextStyle" value="name-text-style-normal" >
-            <label for="name-text-style-normal">Normal</label>
+            <label class="padding-label" for="name-text-style-normal">Normal</label>
 
             <input type="radio" id="name-text-style-uppercase" name="nameTextStyle" value="name-text-style-uppercase" >
-            <label for="name-text-style-uppercase">Uppercase</label>
+            <label class="padding-label" for="name-text-style-uppercase">Uppercase</label>
 
 <!--           Name color -->
             <p>4.Màu chữ tên</p>
 
             <input type="radio" id="name-color-dark" name="nameColor" value="name-color-dark" >
-            <label for="name-color-dark">Dark</label>
+            <label class="padding-label" for="name-color-dark">Dark</label>
 
             <input type="radio" id="name-color-blue" name="nameColor" value="name-color-blue" >
-            <label for="name-color-blue">Blue</label>
+            <label class="padding-label" for="name-color-blue">Blue</label>
 
             <input type="radio" id="name-color-green" name="nameColor" value="name-color-green" >
-            <label for="name-color-green">Green</label>
+            <label class="padding-label" for="name-color-green">Green</label>
 
             <input type="radio" id="name-color-red" name="nameColor" value="name-color-red" >
-            <label for="name-color-red">Red</label>
+            <label class="padding-label" for="name-color-red">Red</label>
 
 <!--          Text Alignment  -->
             <p>5.Căn lề hồ sơ</p>
             <input type="radio" id="text-alignment-left" name="textAlignment" value="text-alignment-left" >
-            <label for="text-alignment-left">Left</label>
+            <label class="padding-label" for="text-alignment-left">Left</label>
             <input type="radio" id="text-alignment-center" name="textAlignment" value="text-alignment-center" >
-            <label for="text-alignment-center">Center</label>
+            <label class="padding-label" for="text-alignment-center">Center</label>
             <input type="radio" id="text-alignment-right" name="textAlignment" value="text-alignment-right" >
-            <label for="text-alignment-right">Right</label>
+            <label class="padding-label" for="text-alignment-right">Right</label>
 
 <!--          Job Title Size -->
             <p>6.Kích thước nghề nghiệp</p>
 
             <input type="radio" id="job-title-size-small" name="jobTitleSize" value="job-title-size-small" >
-            <label for="job-title-size-small">Small</label>
+            <label class="padding-label" for="job-title-size-small">Small</label>
 
             <input type="radio" id="job-title-size-medium" name="jobTitleSize" value="job-title-medium" >
-            <label for="job-title-size-medium">Medium</label>
+            <label class="padding-label" for="job-title-size-medium">Medium</label>
 
             <input type="radio" id="job-title-size-large" name="jobTitleSize" value="job-title-size-large" >
-            <label for="job-title-size-large">Large</label>
+            <label class="padding-label" for="job-title-size-large">Large</label>
 
 <!--           Job title letter spacing  -->
             <p>7.Khoảng cách chữ nghề nghiệp</p>
 
             <input type="radio" id="job-letter-spacing-tight" name="jobLetterSpacing" value="job-letter-spacing-tight" >
-            <label for="job-letter-spacing-tight">Tight</label>
+            <label class="padding-label" for="job-letter-spacing-tight">Tight</label>
 
             <input type="radio" id="job-letter-spacing-normal" name="jobLetterSpacing" value="job-letter-spacing-normal" >
-            <label for="job-letter-spacing-normal">Normal</label>
+            <label class="padding-label" for="job-letter-spacing-normal">Normal</label>
 
             <input type="radio" id="job-letter-spacing-wide" name="jobLetterSpacing" value="job-letter-spacing-wide" >
-            <label for="job-letter-spacing-wide">Wide</label>
+            <label class="padding-label" for="job-letter-spacing-wide">Wide</label>
 
 <!--           Description size -->
             <p>8.Kích thước mô tả</p>
 
             <input type="radio" id="description-size-small" name="descriptionSize" value="description-size-small" >
-            <label for="description-size-small">Small</label>
+            <label class="padding-label" for="description-size-small">Small</label>
 
             <input type="radio" id="description-size-medium" name="descriptionSize" value="description-size-medium" >
-            <label for="description-size-medium">Medium</label>
+            <label class="padding-label" for="description-size-medium">Medium</label>
 
             <input type="radio" id="description-size-large" name="descriptionSize" value="description-size-large" >
-            <label for="description-size-large">Large</label>
+            <label class="padding-label" for="description-size-large">Large</label>
 
 <!--            Description line height -->
             <p>9.Giãn dòng mô tả</p>
 
             <input type="radio" id="description-line-height-tight" name="descriptionLineHeight" value="description-line-height-tight" >
-            <label for="description-line-height-tight">Tight</label>
+            <label class="padding-label" for="description-line-height-tight">Tight</label>
 
             <input type="radio" id="description-line-height-normal" name="descriptionLineHeight" value="description-line-height-normal" >
-            <label for="description-line-height-normal">Normal</label>
+            <label class="padding-label" for="description-line-height-normal">Normal</label>
 
             <input type="radio" id="description-line-height-loose" name="descriptionLineHeight" value="description-line-height-loose" >
-            <label for="description-line-height-loose">Loose</label>
+            <label class="padding-label" for="description-line-height-loose">Loose</label>
 
 <!-- Contact button color -->
             <p>10.Màu nút liên hệ</p>
 
-            <input type="radio" id="contact-button-color-dark" name="contactButtonColor" value="contact-button-color-dark" >
-            <label for="contact-button-color-dark">Dark</label>
+            <input type="radio" id="btn-contact-color-dark" name="contactButtonColor" value="btn-contact-color-dark" >
+            <label class="padding-label" for="btn-contact-color-dark">Dark</label>
 
-            <input type="radio" id="contact-button-color-blue" name="contactButtonColor" value="contact-button-color-blue" >
-            <label for="contact-button-color-blue">Blue</label>
+            <input type="radio" id="btn-contact-color-blue" name="contactButtonColor" value="btn-contact-color-blue" >
+            <label class="padding-label" for="btn-contact-color-blue">Blue</label>
 
-            <input type="radio" id="contact-button-color-light" name="contactButtonColor" value="contact-button-color-light" >
-            <label for="contact-button-color-light">Light</label>
+            <input type="radio" id="btn-contact-color-light" name="contactButtonColor" value="btn-contact-color-light" >
+            <label class="padding-label" for="btn-contact-color-light">Light</label>
 
         </div><!-- Preview Area--><div class="preview-area">
 
         <p class="preview-area-top">Preview hồ sơ cá nhân</p>
                <div class="profile-card">
-                   <h1>Nguyễn Minh Khoa</h1>
-                   <p class="job-title-name" >Frontend Developer - Ho Chi Minh City</p>
-                   <div class="description">
+                   <h1 class="profile-name">Nguyễn Minh Khoa</h1>
+                   <p class="profile-job" >Frontend Developer - Ho Chi Minh City</p>
+                   <div class="profile-desc">
                        <p >Tôi là một lập trình viên Frontend với hơn 3 năm kinh nghiệm xây dựng giao diện web hiện đại, tập trung vào hiệu suất và trải nghiệm người dùng. Tôi yêu thích việc biến ý tưởng sáng tạo thành sản phẩm thực tế.</p>
 
                        <div>
-                           <p>Kỹ năng</p>
-                           <span>HTML5</span>
-                           <span>CSS3</span>
-                           <span>JavaScript</span>
-                           <span>React</span>
-                           <span>Figma</span>
-                           <span>Git</span>
+                           <p class="skill-list">Kỹ năng</p>
+                           <span class="skill-tag">HTML5</span>
+                           <span class="skill-tag">CSS3</span>
+                           <span class="skill-tag">JavaScript</span>
+                           <span class="skill-tag">React</span>
+                           <span class="skill-tag">Figma</span>
+                           <span class="skill-tag">Git</span>
                        </div>
 
                        <div>
-                           <p>Sở thích</p>
-                           <span>Nhiếp ảnh</span>
-                           <span>Đọc sách</span>
-                           <span>Du lịch</span>
-                           <span>Cà phê</span>
+                           <p class="hobby-list">Sở thích</p>
+                           <span class="hobby-tag">Nhiếp ảnh</span>
+                           <span class="hobby-tag">Đọc sách</span>
+                           <span class="hobby-tag">Du lịch</span>
+                           <span class="hobby-tag">Cà phê</span>
                        </div>
 
                    </div>
-                   <button class="padding-button contact-button">Liên hệ với tôi</button>
+                   <button class="padding-btn btn-contact">Liên hệ với tôi</button>
                </div>
                </div>
     </div>
