@@ -8,9 +8,166 @@
     <title>Các hình có thể tạo được với Border</title>
 
     <style>
-        .square{
-
+/*<!--Reset css -->*/
+        *{
+            margin: 20px;
         }
+        /* Hình vuông */
+        .square{
+            width: 50px;
+            height: 50px;
+           border: #991b1b 1px solid;
+        }
+
+        /* Hình chữ nhật */
+        .rectangle{
+            width: 100px;
+            height: 50px;
+            border: #1b2599 1px solid;
+        }
+
+        /* Tam giác lên */
+        .triangle-up{
+            width: 0;
+            border-bottom: #4ef60d 100px solid;
+            border-top: transparent 50px solid;
+            border-left: transparent 50px solid;
+            border-right: transparent 50px solid;
+        }
+
+        /* Tam giác xuống */
+        .triangle-down{
+            width: 0;
+            border-bottom: transparent 50px solid;
+            border-top: #f6a104 100px solid;
+            border-left: transparent 50px solid;
+            border-right: transparent 50px solid;
+        }
+
+        /* Tam giác trái */
+        .triangle-left{
+            width: 0;
+            border-bottom: transparent 50px solid;
+            border-left: transparent 50px solid;
+            border-right: #8e05ea 100px solid;
+            border-top: transparent 50px solid;
+        }
+
+        /* Tam giác phải */
+        .triangle-right{
+            width: 0;
+            border-bottom: transparent 50px solid;
+            border-left: #e68139 100px solid;
+            border-right: transparent 50px solid;
+            border-top: transparent 50px solid;
+        }
+
+        /* Hình thang */
+        .trapezoid{
+            width: 100px;
+            border-bottom: #75a686 80px solid;
+            border-left: transparent 40px solid;
+            border-right: transparent 40px solid;
+        }
+
+        /* Tam giác rộng */
+        .triangle-obtuse{
+            width: 0;
+            border-top: transparent 50px solid;
+            border-left: transparent 90px solid;
+            border-right: transparent 90px solid;
+            border-bottom: #1b2313 70px solid;
+        }
+
+        /* Tam giác nhọn */
+        .triangle-acute{
+            width: 0;
+            border-top: transparent 50px solid;
+            border-left: transparent 50px solid;
+            border-right: transparent 50px solid;
+            border-bottom: #7a3904 200px solid;
+        }
+
+        /* Tam giác cân */
+        .triangle-isosceles{
+            width: 0;
+            border-top: transparent 50px solid;
+            border-left: transparent 70px solid;
+            border-right: transparent 70px solid;
+            border-bottom: #ae6225 100px solid;
+        }
+
+        /* Mũi tên phải */
+        .arrow-right{
+            width: 0;
+            border-top: transparent 50px solid;
+            border-bottom: transparent 50px solid;
+            border-right: transparent 50px solid;
+            border-left: #5a8f7d 100px solid;
+        }
+
+        /* Mũi tên trái */
+        .arrow-left{
+            width: 0;
+            border-top: transparent 50px solid;
+            border-bottom: transparent 50px solid;
+            border-left: transparent 50px solid;
+            border-right: #514091 100px solid;
+        }
+
+        /* Duy băng/ Lá cờ*/
+        .ribbon{
+            width: 100px;
+          border-right: transparent 50px solid;
+            border-bottom: #d64d41 50px solid;
+            border-top: #d64d41 50px solid;
+            border-left: #d64d41 50px solid;
+        }
+
+        /* Logo F8 */
+        .logo-full,.logo-first,.logo-last{
+            display: inline-block;
+        }
+
+        .first-up{
+            margin: 0;
+            width: 100px;
+            height:80px;
+            background-color: transparent;
+            border-top: #d64d41 40px solid;
+            border-bottom: #d64d41 40px solid;
+            border-left: #d64d41 40px solid;
+            border-right: #d64d41 0 solid;
+        }
+        .first-down{
+            margin: 0;
+            width: 100px;
+            height:100px;
+            background-color: transparent;
+            border-top: #d64d41 0 solid;
+            border-bottom: #d64d41 0 solid;
+            border-left: #d64d41 40px solid;
+            border-right: #d64d41 0 solid;
+        }
+
+        .last-up{
+            margin: 0;
+            width: 100px;
+            height:70px;
+            background-color: transparent;
+            border: #d64d41 40px solid;
+        }
+        .last-down{
+            margin: 0;
+            width: 100px;
+            height:70px;
+            background-color: transparent;
+            border-top: #d64d41 0 solid;
+            border-bottom: #d64d41 40px solid;
+            border-left: #d64d41 40px solid;
+            border-right: #d64d41 40px solid;
+        }
+
     </style>
 </head>
 <body>
@@ -27,9 +184,21 @@
 <div class="arrow-right"></div>
 <div class="arrow-left"></div>
 <div class="ribbon"></div>
-<div class="f8"></div>
-<div class="f"></div>
-<div class="8"></div>
+
+<!-- Logo F8 -->
+<div class="logo-full"></div>
+
+<!-- Logo chữ F -->
+<div class="logo-first">
+    <div class="first-up"></div>
+    <div class="first-down"></div>
+</div>
+
+<!-- Logo số 8 -->
+<div class="logo-last">
+    <div class="last-up"></div>
+    <div class="last-down"></div>
+</div>
 
 </body>
 </html>
