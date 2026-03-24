@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Đăng kí tư vấn</title>
+    <link rel="stylesheet" href="Css/styles.css">
+</head>
+<body>
+<input class="check" type="checkbox" id="check">
+<label class="open-btn" for="check">Tư vấn ngay</label>
+<div class="overlay"></div>
+<div class="container">
+    <div class="form">
+        <form action="#">
+            <h1>Đăng kí tư vấn</h1>
+            <p>Điền thông tin để được tư vấn lộ trình phù hợp</p>
+            <div>
+                <label for="fullname">Họ và tên</label><br>
+                <input type="text" name="fullname" id="fullname" required placeholder="Nguyễn Văn A">
+            </div>
+            <div>
+                <label for="phone">Số điện thoại</label><br>
+                <input type="number" name="phone" id="phone" required placeholder="0912345678">
+            </div>
+      <div>
+          <label for="email">Email</label><br>
+          <input type="email" name="email" id="email" placeholder="example@gmail.com">
+      </div>
+<div>
+    <p>Khoá học quan tâm</p>
+   <div>
+       <input type="checkbox" name="courses[]" id="htmlCss" value="htmlCss">
+       <label for="htmlCss">HTML & CSS</label>
+   </div>
+   <div>
+       <input type="checkbox" name="courses[]" id="javascript" value="javascript">
+       <label for="javascript">Javascript</label>
+   </div>
+<div>
+    <input type="checkbox" name="courses[]" id="frontend" value="frontend lộ trình">
+    <label for="frontend">Front-end lộ trình</label>
+</div>
+    <input type="checkbox" name="courses[]" id="reactJs" value="reactJs">
+    <label for="reactJs">React JS</label>
+</div>
+            <div>
+                <input type="checkbox" name="courses[]" id="none" value="none">
+                <label for="none">Chưa rõ - cần tư vấn</label>
+            </div>
+
+            <button class="submit-btn" type="submit">Đăng kí tư vấn ngay</button>
+
+
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>
