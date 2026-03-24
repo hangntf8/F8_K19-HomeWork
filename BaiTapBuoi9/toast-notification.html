@@ -1,20 +1,93 @@
 <!doctype html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Hộp thông báo</title>
+    <style>
+
+/*<!--Reset css-->*/
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Ẩn input, ko chiếm chỗ*/
+        input{
+            display: none;
+        }
+
+        /* css nút mở hiện thông báo*/
+        .open-btn{
+            /* dùng relative để định vị theo body, dịch khỏi vị trí cũ, ko rời khỏi luồng */
+            position: relative;
+            padding: 10px 20px;
+            margin-left: 60px;
+            width: 150px;
+            background-color: black;
+            color: white;
+        }
+
+        /* Css hộp thông báo, dùng relative để định vị theo body, dịch khỏi vị trí cũ,ko rời khỏi luồng */
+        .toast{
+            top: 18px;
+            margin-left: 50px;
+            margin-top: 120px;
+            display: inline-block;
+            position: relative;
+            background-color: #4ef60d;
+            width: 230px;
+            height: 50px;
+        }
+
+        /* lời nhắn của hộp thông báo, dùng absolute để định vị theo class toast, rời khỏi luồng, lấy vị trì class toast làm gốc  */
+        .message{
+            position: absolute;
+            top: 13px;
+            left: 25px;
+            margin: auto;
+            color: white;
+        }
+
+        /* css nút đóng x, dùng absolute để định vị theo class toast,lấy vị trì class toast làm gốc */
+        .close-btn{
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            margin: auto;
+            padding: 5px 8px;
+            background-color: #5a8f7d;
+            color: white;
+        }
+
+    /*    Logic active */
+/* dùng víibility để ẩn phần tử nhưng vẫn giữ chỗ */
+/* Khi mở trang thì mặc định hộp thông báo ẩn */
+.toast{
+    visibility: hidden;
+}
+
+/*!* Khi bấm nút hiện thì hộp thông báo hiện, bấm lại nút hiện. hoặc nút x thì hộp thông báo đóng /*/
+#toast-toggle:checked ~.toast{
+    visibility: visible ;
+}
+
+    </style>
+
 </head>
 <body>
+<!-- Nút hiện thông báo -->
 <input type="checkbox" id="toast-toggle" name="toast" value="toast-toggle">
-<label for="toast-toggle"><button>Hiện thông báo</button></label>
+<label class="open-btn" for="toast-toggle">Hiện thông báo</label>
 
+<!-- Hộp thông báo -->
 <div class="toast">
-    <p>🎉 Lưu thành công</p>
-    <input type="checkbox" id="x" name="x" value="x" >
-    <label for="x">X</label>
+    <p class="message">🎉 Lưu thành công!</p>
+<!--   dùng chung 1 checkbok để bấm nút x thì cũng đóng  -->
+    <label class="close-btn" for="toast-toggle">&times;</label>
 </div>
 </body>
 </html>
