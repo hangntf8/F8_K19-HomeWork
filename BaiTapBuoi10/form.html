@@ -9,90 +9,113 @@
     <link rel="stylesheet" href="Css/styles.css">
 </head>
 <body>
-<div class="modal-toggle">
-    <input class="check" type="checkbox" id="modal-toggle" >
+<!-- màn trang có 1 nút bấm để mở form  -->
+    <input  type="checkbox" id="modal-toggle" hidden="hidden">
     <label class="open-btn" for="modal-toggle" >Tư vấn ngay</label>
-</div>
-<div class="overlay">
-    <div class="container">
-        <div class="form">
-            <form action="#">
-               <div class="modal-title">
-                   <h1>Đăng kí tư vấn</h1>
-                   <p>Điền thông tin để được tư vấn lộ trình phù hợp</p>
-                   <label for="modal-toggle">&times;</label>
-               </div>
-                <div class="modal-content">
-                    <div class="modal-content__info">
-                        <div>
-                            <label for="fullname">Họ và tên</label>
-                            <span class="color--red">*</span><br>
-                            <input type="text" name="fullname" id="fullname" required placeholder="Nguyễn Văn A">
-                          <div class="hover-text">
-                              <p class="hover-text__content">Nhập họ và tên đầy đủ của bạn</p>
-                              <div class="triangle"></div>
-                          </div>
-                        </div>
-                        <div>
-                            <label for="phone">Số điện thoại</label>
-                            <span class="color--red">*</span><br>
-                            <input type="number" name="phone" id="phone" required placeholder="0912345678">
-                            <div class="hover-text">
-                                <p class="hover-text__content">Số điện thoại để chúng tôi liên hệ tư vấn</p>
-                                <div class="triangle"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <label for="email">Email</label>
-                            <span class="color--red">*</span><br>
-                            <input type="email" name="email" id="email" placeholder="example@gmail.com">
-                            <div class="hover-text">
-                                <p class="hover-text__content">Email nhận thông tin khoá học(không bắt buộc)</p>
-                                <div class="triangle"></div>
-                            </div>
-                        </div>
-                        <div>
+
+<!--　Modal form -->
+    <div class="overlay" >
+<!--       Nền tối sau lớp modal chính để bấm vào tắt modal form được　 -->
+        <label class="backdrop" for="modal-toggle"></label>
+<!--    modal form chính -->
+        <div class="container">
+            <div class="form">
+                <form action="https://api-gateway.fullstack.edu.vn/action_page.php">
+                    <div class="modal-title">
+                        <h1>Đăng kí tư vấn</h1>
+                        <p>Điền thông tin để được tư vấn lộ trình phù hợp</p>
+                        <label for="modal-toggle">&times;</label>
                     </div>
 
-                    </div>
+<!--                khung điền thông tin ngừời dùng  -->
+                    <div class="modal-content">
+                        <div class="modal-content__info">
+                            <div>
+                                <label for="fullName">Họ và tên</label>
+                                <span class="color--red">*</span><br>
+                                <input type="text" name="fullName" id="fullName" required placeholder="Nguyễn Văn A">
+                                <div class="tooltip-text">
+                                    <p class="tooltip-text__content">Nhập họ và tên đầy đủ của bạn</p>
+                                    <div class="triangle"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="phone">Số điện thoại</label>
+                                <span class="color--red">*</span><br>
+                                <input type="tel" name="phone" id="phone" required placeholder="0912345678">
+                                <div class="tooltip-text">
+                                    <p class="tooltip-text__content">Số điện thoại để chúng tôi liên hệ tư vấn</p>
+                                    <div class="triangle"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="email">Email</label>
+                                <span class="color--red">*</span><br>
+                                <input type="email" name="email" id="email" placeholder="example@gmail.com">
+                                <div class="tooltip-text">
+                                    <p class="tooltip-text__content">Email nhận thông tin khoá học(không bắt buộc)</p>
+                                    <div class="triangle"></div>
+                                </div>
+                            </div>
+                            <div>
+                            </div>
 
-                    <div class="modal-content__courses">
-                       <div class="courses__title">
-                           <span>Khoá học quan tâm</span>
-                           <span class="color--red">*</span><br>
-                       </div>
-                        <div>
-                            <input type="checkbox" name="courses[]" id="htmlCss" value="htmlCss">
-                            <label class="html-css" for="htmlCss">HTML & CSS</label>
-                            <div class="hover-text">
-                                <p class="hover-text__content">Khoá nền tảng xây dựng giao diện web</p>
+                        </div>
+
+<!--                      Danh sách khoá học   -->
+                        <div class="modal-content__courses">
+                            <div class="courses__title">
+                                <span>Khoá học quan tâm</span>
+                                <span class="color--red">*</span><br>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="courses[]" id="htmlCss" value="htmlCss">
+                                <label class="html-css" for="htmlCss">HTML & CSS</label>
+                                <div class="tooltip-text">
+                                    <p class="tooltip-text__content">Khoá nền tảng xây dựng giao diện web</p>
+                                    <div class="triangle"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="courses[]" id="javascript" value="javascript">
+                                <label class="javascript" for="javascript">Javascript</label>
+                                <div class="tooltip-text">
+                                    <p class="tooltip-text__content">Ngôn ngữ lập trình cho web động</p>
+                                    <div class="triangle"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="courses[]" id="frontend" value="frontend lộ trình">
+                                <label class="front-end" for="frontend">Front-end lộ trình</label>
+                                <div class="tooltip-text">
+                                    <p class="tooltip-text__content">Lộ trình hoàn chỉnh trở thành Front-end Developer</p>
+                                    <div class="triangle"></div>
+                                </div>
+                            </div>
+                            <input type="checkbox" name="courses[]" id="reactJs" value="reactJs">
+                            <label class="reactjs" for="reactJs">React JS</label>
+                            <div class="tooltip-text">
+                                <p class="tooltip-text__content">Thư viện JavaScript phổ biến nhất hiện nay</p>
                                 <div class="triangle"></div>
                             </div>
+                            <div>
+                                <input type="checkbox" name="courses[]" id="none" value="none">
+                                <label class="support" for="none">Chưa rõ - cần tư vấn</label>
+                                <div class="tooltip-text">
+                                    <p class="tooltip-text__content">Chúng tôi sẽ tư vấn lộ trình phù hợp với bạn</p>
+                                    <div class="triangle"></div>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <input type="checkbox" name="courses[]" id="javascript" value="javascript">
-                            <label for="javascript">Javascript</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" name="courses[]" id="frontend" value="frontend lộ trình">
-                            <label for="frontend">Front-end lộ trình</label>
-                        </div>
-                        <input type="checkbox" name="courses[]" id="reactJs" value="reactJs">
-                        <label for="reactJs">React JS</label>
-                        <div>
-                            <input type="checkbox" name="courses[]" id="none" value="none">
-                            <label for="none">Chưa rõ - cần tư vấn</label>
-                        </div>
-                    </div>
-                </div>
-
-              <label class="submit-btn"  for="modal-toggle">Đăng kí tư vấn ngay</label>
+                    </div>›
+<!-- Nút bấm nộp form-->
+                    <button class="submit-btn"  type="submit">Đăng kí tư vấn ngay</button>
 
 
-            </form>
+                </form>
+            </div>
         </div>
     </div>
-</div>
 
 
 
