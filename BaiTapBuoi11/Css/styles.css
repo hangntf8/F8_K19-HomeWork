@@ -29,14 +29,108 @@ body{
     height: 60px;
     background-color: #3a73d1;
 }
-
+/* css riêng từng khối */
 .container-1{
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 210px;
 }
 
 .container-2{
     display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 210px;
+}
+
+.container-3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.container-3 .box-1{
+    margin: 0 0 20px 0;
+}
+.container-3 .box-2{
+    margin: 0 0 50px 0;
+}
+
+.container-4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-4 .box-1{
+    margin: 0 10px 0 0;
+}
+.container-4 .box-2{
+    margin: 0 40px 0 0;
+}
+
+.container-5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+.container-6{
+    display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+}
+
+.container-6 .box-1{
+    margin-top: 10px;
+}
+.container-6 .box-2{
+    margin-top: 10px;
+}
+.container-6 .box-3{
+    margin-top: 10px;
+}
+
+.container-7{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.container-7 .box-1{
+    margin: 0 0 60px  0;
+}
+.container-7 .box-2{
+    margin: 0 0 20px  0;
+}
+
+.container-8{
+    display: flex;
+    align-items: center;
+}
+.container-8 .box-2{
+    margin: auto;
+}
+
+.container-9{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.container-9 .box-1{
+    margin: -60px 0 0 0;
+}
+.container-9 .box-3{
+    margin: 0 0 -60px 0 ;
+}
+
+.container-10{
+    display: flex;
+    justify-content: space-between;
+}
+.container-10 .box-2{
+margin: auto;
+}
+.container-10 .box-3{
+margin-top: 136px;
 }
