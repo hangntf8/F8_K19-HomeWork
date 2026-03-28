@@ -1,0 +1,66 @@
+/* Reset css */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header-menu > ul > li {
+    display: inline;
+    font-weight: bold;
+    color: #333333;
+    padding: 6px 0;
+    margin: 25px;
+}
+
+.header-menu > ul > li::after{
+    content: "";
+/*display: inline;*/
+    width: 0;
+    border-top: 10px solid #555555;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+
+}
+
+.header-menu > ul > li:hover {
+    color: #d62828;
+    border: 2px solid #d62828;
+}
+
+.header-menu > ul > li > ul > li {
+    position: relative;
+    display: none;
+    background-color: #ffffff;
+}
+
+.header-menu > ul > li > ul > li::after{
+    content: "";
+    /*display: inline;*/
+    width: 0;
+    border-left: 10px solid #777777;
+    border-top: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+.header-menu > ul > li > ul > li:hover {
+    display: block;
+   background-color: #f5f5f5 ;
+    border: 1px solid #dddddd;
+    min-width: 200px;
+    padding: 6px 10px;
+    color: #d62828;
+}
+
+.header-menu > ul > li > ul > li > ul > li{
+  position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #f5f5f5 ;
+    border: 1px solid #dddddd;
+    min-width: 200px;
+    padding: 6px 10px;
+    color: #d62828;
+}
