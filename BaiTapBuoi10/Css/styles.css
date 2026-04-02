@@ -5,62 +5,142 @@
     box-sizing: border-box;
 }
 
-.header-menu > ul > li {
-    display: inline;
+ html{
+ /* 1rem = 10px */
+     font-size: 62.5%;
+     font-family: Arial, sans-serif;
+ }
+
+ .container{
+     margin: 0 auto;
+     text-align: center;
+ }
+ /* Css khung header */
+.header {
+    margin-top: 2rem;
+    display: inline-block;
+    border: 0.1rem solid #ddd;
+    max-width: 120rem;
+    padding: 0.8rem;
+}
+
+ /*Ảnh logo F8*/
+img{
+    vertical-align: middle;
+    margin-right: 2.5rem;
+}
+
+/*Menu điều hướng*/
+.navigation-bar{
+    display: inline-block;
+    margin-right: 2.5rem;
+    vertical-align: middle;
+}
+/*Menu cấp 1*/
+.menu-item {
+    display: inline-block;
+    position: relative;
+    text-align: left;
+    font-size: 1.6rem;
     font-weight: bold;
     color: #333333;
-    padding: 6px 0;
-    margin: 25px;
+    padding: 0.6rem 1.8rem 0.6rem 0 ;
+    margin-right: 2.5rem;
 }
 
-.header-menu > ul > li::after{
+/* Mũi tên chỉ xuống*/
+.menu-item::after{
+    position: absolute;
+    right: 0;
+    top: 40%;
     content: "";
-/*display: inline;*/
     width: 0;
-    border-top: 10px solid #555555;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-
+    height: 0;
+    border-left: 0.5rem solid transparent;
+    border-right: 0.5rem solid transparent;
+    border-top: 0.5rem solid #555;
 }
 
-.header-menu > ul > li:hover {
+/*hover hiệu ứng*/
+.menu-item:hover {
     color: #d62828;
-    border: 2px solid #d62828;
+    border-bottom: 0.2rem solid #d62828;
 }
 
-.header-menu > ul > li > ul > li {
-    position: relative;
+/* Dropdown cấp 1 */
+.sub-menu {
     display: none;
-    background-color: #ffffff;
+    position: absolute;
+    top: calc(100% + 0.1rem);
+    left: 0;
+    font-size: 1.6rem;
+    font-weight: normal;
+    min-width: 20rem;
+    background: #fff;
+    border: 0.1rem solid #ddd;
 }
 
-.header-menu > ul > li > ul > li::after{
-    content: "";
-    /*display: inline;*/
-    width: 0;
-    border-left: 10px solid #777777;
-    border-top: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-}
-
-.header-menu > ul > li > ul > li:hover {
+/* hover thì hiện dropdown cấp 1 */
+.menu-item:hover > .sub-menu {
     display: block;
-   background-color: #f5f5f5 ;
-    border: 1px solid #dddddd;
-    min-width: 200px;
-    padding: 6px 10px;
+}
+
+/* Các item trong dropdown cấp 1*/
+.sub-menu > li {
+    display: block;
+    position: relative;
+    color: #333;
+    padding: 0.6rem 1rem;
+}
+
+/* hover item dropdown cấp 1*/
+.sub-menu > li:hover {
+    background: #f5f5f5;
     color: #d62828;
 }
 
-.header-menu > ul > li > ul > li > ul > li{
-  position: absolute;
+/* Mũi tên chỉ phải*/
+.sub-menu-item::after {
+    content: "";
+    position: absolute;
+    right: 1rem;
+    top: 35%;
+    width: 0;
+    height: 0;
+    border-top: 0.5rem solid transparent;
+    border-bottom: 0.5rem solid transparent;
+    border-left: 0.5rem solid #777;
+}
+
+/*Ẩn dropdown cấp 2 khi chưa hover*/
+.sub-menu-2 {
+    display: none;
+    position: absolute;
     top: 0;
     left: 100%;
-    background-color: #f5f5f5 ;
-    border: 1px solid #dddddd;
-    min-width: 200px;
-    padding: 6px 10px;
+    min-width: 20rem;
+    background: #fff;
+    border: 0.1rem solid #ddd;
+}
+
+/* Hiện khi hover tới*/
+.sub-menu-item:hover > .sub-menu-2 {
+    display: block;
+}
+
+/* item trong sub menu 2*/
+.sub-menu-2 > li {
+    display: block;
+    padding: 0.6rem 1rem;
+    color: #333333;
+}
+
+/* hover item sub menu 2*/
+.sub-menu-2 > li:hover {
+    background: #f5f5f5;
     color: #d62828;
 }
+
+
+
+
