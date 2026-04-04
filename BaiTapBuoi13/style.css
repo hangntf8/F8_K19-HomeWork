@@ -1,29 +1,97 @@
 /* Reset css */
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+/* Layout */
 
 .container{
     display: flex;
     height: 100vh;
     width: 100%;
-    gap: 0;
 }
-
+/* Css chung cho mỗi strip */
 .strip{
-    font-family: Helvetica, sans-serif;
-    font-weight: 900;
-    font-size: 2rem;
-    color: white;
-    height: 100vh;
-    width: 20%;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    font-family: Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+
+    min-height: 100vh;
+    width: 20%;
+
+    color: white;
+    overflow: hidden;
 }
 
+.strip:hover{
+    width: 100%;
+    cursor: pointer;
+}
+
+/* Khi hover strip nào thì hiện ảnh tương ứng */
+/* Hover relax strip */
+.relax-strip:hover  > .relax-title{
+    display: none;
+}
+.relax-strip:hover > img{
+    display: block;
+}
+.relax-strip:hover > .overlay{
+    display: block;
+}
+
+/* Hover explore strip */
+.explore-strip-strip:hover  > .explore-title{
+    display: none;
+}
+.explore-strip:hover > img{
+    display: block;
+}
+.explore-strip:hover > .overlay{
+    display: block;
+}
+
+/* Hover travel strip */
+.travel-strip:hover  > .travel-title{
+    display: none;
+}
+.travel-strip:hover > img{
+    display: block;
+}
+.travel-strip-strip:hover > .overlay{
+    display: block;
+}
+
+/* Hover achieve strip */
+.achieve-strip:hover  > .achieve-title{
+    display: none;
+}
+.achieve-strip:hover > img{
+    display: block;
+}
+.achieve-strip:hover > .overlay{
+    display: block;
+}
+
+/* Hover dare strip */
+.dare-strip:hover  > .dare-title{
+    display: none;
+}
+.dare-strip:hover > img{
+    display: block;
+}
+.dare-strip:hover > .overlay{
+    display: block;
+}
+
+/* Màu nền từng strip */
 .relax-strip{
     background: forestgreen;
 }
@@ -42,4 +110,24 @@
 
 .dare-strip{
     background: violet;
+}
+
+/* Css thuộc tính chung của ảnh mỗi strip */
+img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: rgba(0,0,0,0.1);
 }
