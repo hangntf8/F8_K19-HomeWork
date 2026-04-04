@@ -1,0 +1,231 @@
+/*reset css*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Roboto', sans-serif;
+    background: #f8f9fa;
+    color:  #666666;
+}
+
+/* Header */
+.header{
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+h2{
+    margin: 50px auto 30px;
+    font-size: 36px;
+    font-weight: 700;
+    color: #2c3e50;
+}
+p{
+    font-size: 15px;
+    color: #7f8c8d;
+    line-height: 1.5;
+}
+
+/* Main */
+/* khung lớn chưá 6 card */
+
+.service-cards{
+    display: flex;
+    flex-wrap: wrap;
+    /* width*3 + gap*2 = 1100px */
+    width: 1100px;
+    gap: 25px;
+    margin: 0 auto;
+}
+
+/* css từng card */
+.service-card{
+    width: 350px ;
+    border-radius: 12px;
+    border: 3px solid #e0e0e0;
+    background: #ffffff;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Hover card */
+.service-card:hover{
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+.service-card:has(:hover) .heart-icon{
+    background:#e74c3c;
+}
+
+.service-card:has(:hover) .mdi-heart-outline{
+    display: none;
+}
+
+.service-card:has(:hover) .mdi-heart{
+    display: inline-block;
+}
+
+.service-card:has(:hover) .g230-span{
+    box-shadow: 0 4px 12px rgba(22, 160, 133, 0.4) ;
+}
+
+
+/* căn button và badge theo ảnh phần đầu  */
+
+.service-image{
+    position: relative;
+    margin-bottom: 8px;
+}
+.sale-span, .rent-span{
+    position: absolute;
+    top: 14px;
+    left: 12px;
+}
+.flash-icon{
+    position: absolute;
+    top: 14px;
+    left: 102px;
+}
+.g230-span{
+    position: absolute;
+    bottom: 24px;
+    left: 12px;
+}
+.heart-icon{
+    position: absolute;
+    bottom: 24px;
+    right: 12px;
+}
+.house-span{
+    position: absolute;
+    top: 14px;
+    right: 12px;
+}
+
+/* Ảnh phần đầu*/
+img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* css cho button và badge*/
+.sale-span, .rent-span{
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #ffffff;
+    background: #e74c3c;
+}
+
+.rent-span{
+    background: #e67e22;
+}
+
+.flash-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #2c3e50;
+    color: #ffffff;
+}
+
+.house-span{
+    padding: 6px 16px;
+    border-radius: 20px;
+    background: #34495e;
+    font-size: 12px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.g230-span{
+    padding: 8px 20px;
+    border-radius: 20px;
+    background: #16a085;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    }
+
+.heart-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #e74c3c;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mdi-heart{
+    color: #ffffff;
+    display: none;
+}
+
+/* thân content của card */
+.service-content{
+    margin: 0 20px 0 12px;
+}
+
+span{
+    color: #95a5a6;
+}
+.mdi-map-marker, .mdi-calendar , .mdi-floor-plan, .mdi-bed, .mdi-shower{
+    color: #95a5a6;
+    margin-right: 5px;
+}
+
+.address-info, .update-time{
+    /*font-size: 12px;*/
+    color: #95a5a6;
+}
+
+/* Tiêu đề chính mỗi card*/
+h3{
+    margin: 13px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* Thông tin ngừời dùng*/
+.account-info{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.mdi-account{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #bdc3c7;
+    color: #ffffff;
+    margin-right: 5px;
+}
+
+.span{
+    font-size: 12px;
+    color: #7f8c8d;
+}
+
+/* phần footer của card */
+.service-card-footer{
+    display: flex;
+    gap: 10px;
+    margin: 0 12px 10px 12px ;
+    padding-top: 10px;
+    border-top: 1px solid #ecf0f1;
+}
+
+.mdi-bed{
+    margin-left: 10px;
+}
