@@ -37,6 +37,18 @@
 
 /* Khi hover strip nào thì hiện ảnh tương ứng */
 /* Hover relax strip */
+/*!* cach 2 *!*/
+/*.strip:hover > div[class$="-title"]{*/
+/*    display: none;*/
+/*}*/
+/*.strip:hover > img{*/
+/*    display: block;*/
+/*}*/
+/*.strip:hover > .overlay{*/
+/*    display: block;*/
+/*}*/
+
+
 .relax-strip:hover  > .relax-title{
     display: none;
 }
