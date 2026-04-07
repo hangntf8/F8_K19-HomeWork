@@ -5,3 +5,164 @@
     box-sizing: border-box;
 }
 
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+}
+
+/*  Header Navigation  */
+.header{
+    display: flex;
+    justify-content: space-between;
+    background: black;
+    padding: 1rem 2rem;
+    color: white;
+}
+
+.header__logo{
+    z-index: 1001;
+}
+
+.header__nav{
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    right: -300px; /* Ẩn ra ngoài */
+    width: 300px;
+    height: 100vh;
+    background: #3c3838;
+
+    transition: right 0.3s ease;
+}
+
+.header__nav-link{
+    text-decoration: none;
+    color: white;
+    margin-left: 2rem;
+}
+
+.header__hamburger{
+    display: none;
+    z-index: 999;
+}
+
+/* Overlay */
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+    z-index: 998;
+}
+
+.escape{
+    display: none;
+    z-index: 1000;
+}
+
+/* Tablet/Mobile (≤ 768px) */
+@media screen and (max-width: 768px){
+    .header__nav{
+        visibility: hidden;
+    }
+
+    .header__hamburger{
+        display: block;
+    }
+
+    #hamburger:checked ~ header > .header__nav{
+      visibility: visible;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 300px;
+        height: 100vh;
+        background: #3c3838;
+           display: flex;
+       flex-direction: column;
+           padding: 6rem 2rem;
+
+    }
+       .header__nav-link{
+           border-bottom: 1px solid #989696;
+           padding: 2rem 1rem;
+       }
+
+    #hamburger:checked ~ .overlay{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .escape{
+        display: block;
+        position: fixed;
+        top: 3rem;
+        right: 3rem;
+        font-size: 2.4rem;
+    }
+
+}
+
+/* Layout Container */
+.container{
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    margin: 0 auto;
+    align-items: stretch;  /*  Các item trong flex sẽ tự kéo cao bằng nhau */
+
+}
+
+.content__header-title{
+    font-size: 2rem;
+    margin-bottom: 1.6rem;
+}
+
+.content__header-desc{
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.container__content{
+    flex: 1;
+}
+
+
+/* Sidebar */
+.container__sidebar{
+    width: 300px;
+    background: black;
+    color: white;
+}
+
+/* Cards Layout */
+.content__cards{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+}
+
+.card{
+    width: calc((100% - 2rem) / 3);
+    border: 3px solid black;
+}
+
+.card__header{
+    font-size: 1.25rem;
+    background: black;
+    color: white;
+    padding: 1rem;
+}
+
+.card__body{
+    padding: 1rem;
+}
