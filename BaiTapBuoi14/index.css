@@ -66,9 +66,9 @@ body{
 .container{
     display: flex;
     gap: 1.5rem;
+    max-width: 1400px;
     padding: 1.5rem;
     margin: 0 auto;
-    align-items: stretch;  /*  Các item trong flex sẽ tự kéo cao bằng nhau */
 }
 
 .container__content{
@@ -89,6 +89,7 @@ body{
 /* Sidebar */
 .container__sidebar{
     width: 300px;
+    min-height: 300px;
     background:#252323;
     color: #fafafa;
     padding: 1rem;
@@ -201,7 +202,8 @@ body{
     }
 
     .container{
-        display: block;
+        flex-direction: column;
+        max-width: 100%;
     }
 
     .content__header-title {
@@ -217,8 +219,8 @@ body{
     }
 
     .container__sidebar{
-        margin-top: 40px;
         width: 100%;
+        min-height: auto;
     }
 
     }
