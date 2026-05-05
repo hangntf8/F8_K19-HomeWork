@@ -34,8 +34,8 @@ console.log(getElectricityBill(120))// expect: (50 * 1678) + (50 * 1734) + (20 *
 // Kiểm tra xem tên vừa dọn dẹp có chứa từ khóa keyword (cũng được chuyển về chữ thường) hay không.
 // Hàm trả về true nếu có chứa, và false nếu không.
 function cleanName(name, keyword) {
-    cleanedName = name.trim().toLowerCase()
-    cleanedKeyword = keyword.trim().toLowerCase()
+    const cleanedName = name.trim().toLowerCase()
+    const cleanedKeyword = keyword.trim().toLowerCase()
     return cleanedName.includes(cleanedKeyword)
 }
 console.log(cleanName('   NGUYEN Van An   ', 'an')); // expect: true (because 'nguyen van an' includes 'an')
